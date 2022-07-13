@@ -17,8 +17,8 @@ before_install:
   - gcloud config set project multi-k8s-356115
   - gcloud config set compute/zone us-central1-c	
   - gcloud container clusters get-credentials multi-cluster
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME"  --password -stdin
-  - docker build -t manikkhosla/client-test -f client/Dockerfile.dev ./client
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME"  --password-stdin
+  - docker build -t manikkhosla/client-test -f ./client/Dockerfile.dev ./client
 
 scripts:
   - docker run CI=true manikkhosla/client-test npm test
