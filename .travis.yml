@@ -1,3 +1,4 @@
+language: generic
 sudo: required
 
 services:
@@ -21,7 +22,7 @@ before_install:
   - docker build -t manikkhosla/client-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true manikkhosla/client-test npm test
+  - docker run -e CI=true manikkhosla/client-test npm run test
 
 deploy:
   provider: script
