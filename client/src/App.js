@@ -27,6 +27,10 @@ function App() {
           <Route path="/otherpage" component={OtherPage} />
         </div>
       </div>
+      <footer>
+        <h5> Created And Developed By : Manik Khosla</h5>
+        <h6>  </h6>
+      </footer>
     </Router>
   );
 }
