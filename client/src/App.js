@@ -26,11 +26,10 @@ function App() {
           <Route exact path="/" component={Fib} />
           <Route path="/otherpage" component={OtherPage} />
         </div>
-      </div>
-      <footer>
+        <footer>
         <h5> Created And Developed By : Manik Khosla</h5>
-        <h6>  </h6>
       </footer>
+      </div>
     </Router>
   );
 }
