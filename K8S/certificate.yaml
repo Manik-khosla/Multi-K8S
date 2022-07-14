@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+ 
+kind: Certificate
+metadata:
+  name: fibonaccicalculator-co-in-tls
+spec:
+  secretName: fibonaccicalculator-co-in
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: fibonaccicalculator.co.in
+  dnsNames:
+    - fibonaccicalculator.co.in
+    - www.fibonaccicalculator.co.in
